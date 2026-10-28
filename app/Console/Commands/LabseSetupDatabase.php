@@ -37,6 +37,10 @@ class LabseSetupDatabase extends Command
                 $sql = file_get_contents($path);
                 // Hilangkan perintah meta psql seperti \c lab_se jika ada
                 $sql = preg_replace('/^\\\\c\s+.*$/m', '', $sql);
+                // CREATE DATABASE tidak diizinkan pada provider terkelola (Supabase/Neon):
+                // database sudah dibuat oleh provider, jadi perintah ini harus dibuang
+                // agar sisa file (CREATE TABLE) tetap dijalankan.
+                $sql = preg_replace('/^\s*CREATE\s+DATABASE\b[^;]*;/im', '', $sql);
                 DB::unprepared($sql);
                 $this->info("Berhasil menjalankan {$label}");
             } catch (Throwable $e) {
