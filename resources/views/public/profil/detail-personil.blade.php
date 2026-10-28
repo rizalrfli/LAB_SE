@@ -39,8 +39,19 @@
                                 <i class="lni lni-briefcase"></i>
                                 {{ $personil['jabatan'] ?? 'Anggota' }}
                             </p>
-                            @if (!empty($personil['instagram']) || !empty($personil['linkedin']))
+                            @if (!empty($personil['nip']))
+                                <p class="profile-role">
+                                    <i class="lni lni-id-card"></i>
+                                    NIP. {{ $personil['nip'] }}
+                                </p>
+                            @endif
+                            @if (!empty($personil['sinta_url']) || !empty($personil['instagram']) || !empty($personil['linkedin']))
                                 <div class="profile-socials">
+                                    @if (!empty($personil['sinta_url']))
+                                        <a href="{{ $personil['sinta_url'] }}" target="_blank" rel="noopener" class="social-icon" title="Profil SINTA" aria-label="Profil SINTA {{ $personil['nama'] }}">
+                                            <i class="lni lni-graduation"></i>
+                                        </a>
+                                    @endif
                                     @if (!empty($personil['instagram']))
                                         <a href="{{ $personil['instagram'] }}" target="_blank" rel="noopener" class="social-icon instagram">
                                             <i class="lni lni-instagram-filled"></i>

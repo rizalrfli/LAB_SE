@@ -125,6 +125,9 @@ class PendaftaranController extends Controller
                       ->orWhere('email', 'ILIKE', "%{$search}%");
                 });
             }
+            if (in_array($statusFilter, ['pending', 'accepted', 'rejected'], true)) {
+                $query->where('status', $statusFilter);
+            }
 
             $totalRecords = (clone $query)->count();
             $totalPages = $totalRecords > 0 ? (int) ceil($totalRecords / $perPage) : 0;

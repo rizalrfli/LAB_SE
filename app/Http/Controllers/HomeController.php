@@ -78,7 +78,7 @@ class HomeController extends Controller
             }
             $misiItems = KontenPage::where('page_key', 'like', 'misi_item_%')
                 ->orderBy('page_key', 'asc')
-                ->limit(3)
+                ->limit(5)
                 ->pluck('content')
                 ->toArray();
 
@@ -103,19 +103,20 @@ class HomeController extends Controller
             $dosenRows = DB::select("
                 SELECT * FROM anggota 
                 WHERE jabatan IS NOT NULL 
-                AND (jabatan LIKE '%Dosen%' OR jabatan LIKE '%Ketua%' OR jabatan LIKE '%Koordinator%' OR jabatan LIKE '%Pembimbing%')
+                AND (jabatan LIKE '%Dosen%' OR jabatan LIKE '%Ketua%' OR jabatan LIKE '%Kepala%' OR jabatan LIKE '%Koordinator%' OR jabatan LIKE '%Pembimbing%' OR jabatan LIKE '%Peneliti%')
                 ORDER BY CASE jabatan
+                    WHEN 'Kepala Laboratorium' THEN 1
                     WHEN 'Ketua Lab' THEN 1
                     WHEN 'Wakil Ketua Lab' THEN 2
                     WHEN 'Koordinator Penelitian' THEN 3
                     WHEN 'Dosen Pembimbing' THEN 4
                     WHEN 'Dosen Pengampu' THEN 5
                     ELSE 6
-                END, id ASC 
+                END, urutan ASC, id ASC 
                 LIMIT 6
             ");
             if (empty($dosenRows)) {
-                $dosenRows = Anggota::orderBy('id', 'asc')->limit(6)->get()->toArray();
+                $dosenRows = Anggota::orderBy('urutan')->orderBy('id')->limit(6)->get()->toArray();
             } else {
                 $dosenRows = array_map(fn($r) => (array) $r, $dosenRows);
             }

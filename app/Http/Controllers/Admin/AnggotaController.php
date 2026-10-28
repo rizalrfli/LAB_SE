@@ -68,6 +68,9 @@ class AnggotaController extends Controller
         $deskripsi = trim((string) $request->input('deskripsi', ''));
         $instagram = trim((string) $request->input('instagram', ''));
         $linkedin = trim((string) $request->input('linkedin', ''));
+        $nip = trim((string) $request->input('nip', ''));
+        $sintaUrl = trim((string) $request->input('sinta_url', ''));
+        $urutan = (int) $request->input('urutan', 0);
 
         if ($nama === '' || mb_strlen($nama) < 3) {
             return redirect()->back()
@@ -108,6 +111,9 @@ class AnggotaController extends Controller
             Anggota::create([
                 'nama' => $nama,
                 'jabatan' => $jabatan !== '' ? $jabatan : null,
+                'nip' => $nip !== '' ? $nip : null,
+                'sinta_url' => $sintaUrl !== '' ? $sintaUrl : null,
+                'urutan' => $urutan,
                 'deskripsi' => $deskripsi !== '' ? $deskripsi : null,
                 'instagram' => $instagram !== '' ? $instagram : null,
                 'linkedin' => $linkedin !== '' ? $linkedin : null,
@@ -161,6 +167,9 @@ class AnggotaController extends Controller
         $deskripsi = trim((string) $request->input('deskripsi', ''));
         $instagram = trim((string) $request->input('instagram', ''));
         $linkedin = trim((string) $request->input('linkedin', ''));
+        $nip = trim((string) $request->input('nip', ''));
+        $sintaUrl = trim((string) $request->input('sinta_url', ''));
+        $urutan = (int) $request->input('urutan', 0);
 
         if ($nama === '' || mb_strlen($nama) < 3) {
             return redirect()->back()
@@ -201,6 +210,9 @@ class AnggotaController extends Controller
             $anggota->update([
                 'nama' => $nama,
                 'jabatan' => $jabatan !== '' ? $jabatan : null,
+                'nip' => $nip !== '' ? $nip : null,
+                'sinta_url' => $sintaUrl !== '' ? $sintaUrl : null,
+                'urutan' => $urutan,
                 'deskripsi' => $deskripsi !== '' ? $deskripsi : null,
                 'instagram' => $instagram !== '' ? $instagram : null,
                 'linkedin' => $linkedin !== '' ? $linkedin : null,

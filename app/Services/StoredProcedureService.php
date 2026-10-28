@@ -97,7 +97,7 @@ class StoredProcedureService
     {
         try {
             $res = DB::selectOne(
-                "SELECT sp_insert_publikasi(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AS id",
+                "SELECT sp_insert_publikasi(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AS id",
                 [
                     $data['judul'],
                     $data['tipe'],
@@ -116,6 +116,8 @@ class StoredProcedureService
                     !empty($data['scopus_indexed']),
                     !empty($data['quartile']) ? $data['quartile'] : null,
                     !empty($data['tanggal_publikasi']) ? $data['tanggal_publikasi'] : null,
+                    (int) ($data['sitasi'] ?? 0),
+                    !empty($data['tautan_scholar']) ? $data['tautan_scholar'] : null,
                 ]
             );
             if ($res && isset($res->id)) {
@@ -133,7 +135,7 @@ class StoredProcedureService
     {
         try {
             $res = DB::selectOne(
-                "SELECT sp_update_publikasi(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AS updated",
+                "SELECT sp_update_publikasi(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) AS updated",
                 [
                     $id,
                     $data['judul'],
@@ -153,6 +155,8 @@ class StoredProcedureService
                     !empty($data['scopus_indexed']),
                     !empty($data['quartile']) ? $data['quartile'] : null,
                     !empty($data['tanggal_publikasi']) ? $data['tanggal_publikasi'] : null,
+                    (int) ($data['sitasi'] ?? 0),
+                    !empty($data['tautan_scholar']) ? $data['tautan_scholar'] : null,
                 ]
             );
             if ($res !== null) {

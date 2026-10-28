@@ -108,10 +108,12 @@
                             </div>
                           @endif
                           <div class="pub-meta-tags">
-                            <span class="pub-type-badge type-{{ ($pub['tipe'] ?? '') === 'journal' ? 'journal' : 'conference' }}">
-                              <i class="lni {{ ($pub['tipe'] ?? '') === 'journal' ? 'lni-book' : 'lni-presentation' }}"></i>
-                              {{ ucfirst($pub['tipe'] ?? 'journal') }}
-                            </span>
+                            @if (!empty($pub['tipe']))
+                              <span class="pub-type-badge type-{{ $pub['tipe'] === 'journal' ? 'journal' : 'conference' }}">
+                                <i class="lni {{ $pub['tipe'] === 'journal' ? 'lni-book' : 'lni-presentation' }}"></i>
+                                {{ ucfirst($pub['tipe']) }}
+                              </span>
+                            @endif
                             @if (!empty($pub['quartile']))
                               <span class="pub-quartile-badge">{{ $pub['quartile'] }}</span>
                             @endif
@@ -124,7 +126,20 @@
                               <i class="lni lni-calendar"></i>
                               {{ $pub['tahun'] }}
                             </span>
+                            <span class="pub-year-badge">
+                              <i class="lni lni-quote-right"></i>
+                              {{ (int) ($pub['sitasi'] ?? 0) }} sitasi
+                            </span>
                           </div>
+                          @if (!empty($pub['tautan_scholar']))
+                            <div class="pub-doi-link">
+                              <a href="{{ $pub['tautan_scholar'] }}" target="_blank" rel="noopener noreferrer" class="doi-link">
+                                <i class="lni lni-link"></i>
+                                <span>Lihat di Google Scholar</span>
+                                <i class="lni lni-arrow-right"></i>
+                              </a>
+                            </div>
+                          @endif
                           @if (!empty($pub['doi']))
                             <div class="pub-doi-link">
                               <a href="https://doi.org/{{ $pub['doi'] }}" target="_blank" class="doi-link">

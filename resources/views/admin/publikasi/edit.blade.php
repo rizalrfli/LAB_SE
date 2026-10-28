@@ -34,9 +34,10 @@
                                     <input type="text" name="judul" class="form-control" value="{{ old('judul', $publikasi['judul']) }}" required minlength="5">
                                 </div>
                                 <div class="col-md-2">
-                                    <label class="form-label fw-bold">Tipe <span class="text-danger">*</span></label>
+                                    <label class="form-label fw-bold">Tipe</label>
                                     <select name="tipe" class="form-control">
-                                        <option value="journal" {{ old('tipe', $publikasi['tipe'] ?? 'journal') === 'journal' ? 'selected' : '' }}>Journal</option>
+                                        <option value="" {{ old('tipe', $publikasi['tipe'] ?? null) === null || old('tipe', $publikasi['tipe'] ?? null) === '' ? 'selected' : '' }}>Tidak dicatat</option>
+                                        <option value="journal" {{ old('tipe', $publikasi['tipe'] ?? '') === 'journal' ? 'selected' : '' }}>Journal</option>
                                         <option value="conference" {{ old('tipe', $publikasi['tipe'] ?? '') === 'conference' ? 'selected' : '' }}>Conference</option>
                                     </select>
                                 </div>
@@ -93,6 +94,15 @@
                                 <div class="col-md-4">
                                     <label class="form-label fw-bold">Tanggal Publikasi</label>
                                     <input type="date" name="tanggal_publikasi" class="form-control" value="{{ old('tanggal_publikasi', !empty($publikasi['tanggal_publikasi']) ? substr($publikasi['tanggal_publikasi'], 0, 10) : '') }}">
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label class="form-label fw-bold">Jumlah Sitasi</label>
+                                    <input type="number" name="sitasi" class="form-control" value="{{ old('sitasi', $publikasi['sitasi'] ?? 0) }}" min="0">
+                                </div>
+                                <div class="col-md-10">
+                                    <label class="form-label fw-bold">Tautan Google Scholar</label>
+                                    <input type="url" name="tautan_scholar" class="form-control" value="{{ old('tautan_scholar', $publikasi['tautan_scholar'] ?? '') }}">
                                 </div>
 
                                 <div class="col-md-12">

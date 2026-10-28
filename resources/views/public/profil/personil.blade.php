@@ -34,7 +34,13 @@
                             <div class="info">
                                 <h6>{{ $row['nama'] }}</h6>
                                 <p>{{ $row['jabatan'] ?? 'Anggota' }}</p>
+                                @if (!empty($row['nip']))
+                                    <p style="font-size: 13px;">NIP. {{ $row['nip'] }}</p>
+                                @endif
                                 <ul class="socials">
+                                    @if (!empty($row['sinta_url']))
+                                        <li><a href="{{ $row['sinta_url'] }}" target="_blank" rel="noopener" title="Profil SINTA" aria-label="Profil SINTA {{ $row['nama'] }}"><i class="lni lni-graduation"></i></a></li>
+                                    @endif
                                     @if (!empty($row['instagram']))
                                         <li><a href="{{ $row['instagram'] }}" target="_blank" rel="noopener"><i class="lni lni-instagram-filled"></i></a></li>
                                     @endif

@@ -33,8 +33,9 @@
                                     <input type="text" name="judul" class="form-control" value="{{ old('judul') }}" required minlength="5">
                                 </div>
                                 <div class="col-md-2">
-                                    <label class="form-label fw-bold">Tipe <span class="text-danger">*</span></label>
+                                    <label class="form-label fw-bold">Tipe</label>
                                     <select name="tipe" class="form-control">
+                                        <option value="" {{ old('tipe') === null || old('tipe') === '' ? 'selected' : '' }}>Tidak dicatat</option>
                                         <option value="journal" {{ old('tipe') === 'journal' ? 'selected' : '' }}>Journal</option>
                                         <option value="conference" {{ old('tipe') === 'conference' ? 'selected' : '' }}>Conference</option>
                                     </select>
@@ -92,6 +93,15 @@
                                 <div class="col-md-4">
                                     <label class="form-label fw-bold">Tanggal Publikasi</label>
                                     <input type="date" name="tanggal_publikasi" class="form-control" value="{{ old('tanggal_publikasi') }}">
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label class="form-label fw-bold">Jumlah Sitasi</label>
+                                    <input type="number" name="sitasi" class="form-control" value="{{ old('sitasi', 0) }}" min="0">
+                                </div>
+                                <div class="col-md-10">
+                                    <label class="form-label fw-bold">Tautan Google Scholar</label>
+                                    <input type="url" name="tautan_scholar" class="form-control" value="{{ old('tautan_scholar') }}" placeholder="https://scholar.google.com/...">
                                 </div>
 
                                 <div class="col-md-12">

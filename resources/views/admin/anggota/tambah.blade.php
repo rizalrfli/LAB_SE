@@ -60,6 +60,21 @@
                                         <i class="lni lni-information"></i> Pilih jabatan anggota di laboratorium
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <label for="nip" class="form-label form-label-custom">NIP</label>
+                                    <input type="text" class="form-control form-control-lg form-input-custom"
+                                           id="nip" name="nip" value="{{ old('nip') }}" placeholder="Contoh: 198406102008121004" maxlength="30">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="urutan" class="form-label form-label-custom">Urutan tampil</label>
+                                    <input type="number" class="form-control form-control-lg form-input-custom"
+                                           id="urutan" name="urutan" value="{{ old('urutan', 0) }}" min="0">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="sinta_url" class="form-label form-label-custom">Tautan SINTA</label>
+                                    <input type="url" class="form-control form-control-lg form-input-custom"
+                                           id="sinta_url" name="sinta_url" value="{{ old('sinta_url') }}" placeholder="https://sinta.kemdiktisaintek.go.id/authors/profile/...">
+                                </div>
                             </div>
 
                             <div class="mb-3">

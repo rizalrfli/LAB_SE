@@ -85,6 +85,7 @@
                                     <th>Tipe</th>
                                     <th>Jurnal / Konferensi</th>
                                     <th>Tahun</th>
+                                <th>Sitasi</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -100,12 +101,17 @@
                                         </td>
                                         <td>{{ $pub['penulis_utama'] ?? '-' }}</td>
                                         <td>
-                                            <span class="badge {{ ($pub['tipe'] ?? 'journal') === 'journal' ? 'bg-success' : 'bg-info' }}">
-                                                {{ ucfirst($pub['tipe'] ?? 'journal') }}
-                                            </span>
+                                            @if(!empty($pub['tipe']))
+                                                <span class="badge {{ $pub['tipe'] === 'journal' ? 'bg-success' : 'bg-info' }}">
+                                                    {{ ucfirst($pub['tipe']) }}
+                                                </span>
+                                            @else
+                                                <span class="text-muted">Tidak dicatat</span>
+                                            @endif
                                         </td>
                                         <td>{{ $pub['nama_journal_conference'] ?? '-' }}</td>
                                         <td><span class="badge bg-secondary">{{ $pub['tahun'] }}</span></td>
+                                        <td class="text-center">{{ (int) ($pub['sitasi'] ?? 0) }}</td>
                                         <td class="text-center">
                                             <div class="btn-group" role="group">
                                                 <a href="{{ route('admin.publikasi.edit', ['id' => $pub['id']]) }}" class="btn btn-primary btn-sm">

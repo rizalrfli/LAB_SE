@@ -136,7 +136,7 @@ class ProfilController extends Controller
     {
         $personilList = [];
         try {
-            $personilList = Anggota::orderByDesc('id')->get()->toArray();
+            $personilList = Anggota::orderBy('urutan')->orderBy('id')->get()->toArray();
         } catch (Throwable $e) {
             // Keep defaults
         }

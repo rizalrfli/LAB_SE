@@ -26,10 +26,13 @@ class Publikasi extends Model
         'scopus_indexed',
         'quartile',
         'tanggal_publikasi',
+        'sitasi',
+        'tautan_scholar',
     ];
 
     protected $casts = [
         'tahun' => 'integer',
+        'sitasi' => 'integer',
         'scopus_indexed' => 'boolean',
         'tanggal_publikasi' => 'date',
     ];

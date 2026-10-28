@@ -211,6 +211,12 @@
               <div class="info">
                 <h6>{{ $dosen['nama'] }}</h6>
                 <p>{{ $dosen['jabatan'] ?? 'Dosen' }}</p>
+                @if (!empty($dosen['nip']))
+                  <p style="font-size: 13px;">NIP. {{ $dosen['nip'] }}</p>
+                @endif
+                @if (!empty($dosen['sinta_url']))
+                  <p style="font-size: 13px;"><a href="{{ $dosen['sinta_url'] }}" target="_blank" rel="noopener noreferrer">Profil SINTA</a></p>
+                @endif
                 <a href="{{ route('profil.detail-personil', ['id' => $dosen['id']]) }}" class="button button-sm radius-10 border-button mt-20">Lihat Profil</a>
               </div>
             </div>

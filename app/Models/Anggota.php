@@ -11,9 +11,16 @@ class Anggota extends Model
     protected $fillable = [
         'nama',
         'jabatan',
+        'nip',
+        'sinta_url',
+        'urutan',
         'foto',
         'instagram',
         'linkedin',
         'deskripsi',
+    ];
+
+    protected $casts = [
+        'urutan' => 'integer',
     ];
 }

@@ -87,6 +87,8 @@ class PublikasiAdminController extends Controller
             'scopus_indexed' => $request->has('scopus_indexed'),
             'quartile' => trim((string) $request->input('quartile', '')) ?: null,
             'tanggal_publikasi' => $request->input('tanggal_publikasi') ?: null,
+            'sitasi' => (int) $request->input('sitasi', 0),
+            'tautan_scholar' => trim((string) $request->input('tautan_scholar', '')) ?: null,
         ];
 
         $spService->insertPublikasi($data);
@@ -146,6 +148,8 @@ class PublikasiAdminController extends Controller
             'scopus_indexed' => $request->has('scopus_indexed'),
             'quartile' => trim((string) $request->input('quartile', '')) ?: null,
             'tanggal_publikasi' => $request->input('tanggal_publikasi') ?: null,
+            'sitasi' => (int) $request->input('sitasi', 0),
+            'tautan_scholar' => trim((string) $request->input('tautan_scholar', '')) ?: null,
         ];
 
         $spService->updatePublikasi($publikasiId, $data);
