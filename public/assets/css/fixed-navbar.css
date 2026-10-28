@@ -1,0 +1,1017 @@
+/* ============================================
+   NAVBAR BARU - FIXED SELALU TERLIHAT - DESAIN RAPI
+   ============================================ */
+
+#fixed-navbar {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 999999 !important;
+	background: #fff !important;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	transform: none !important;
+	height: auto !important;
+	min-height: 80px !important;
+}
+
+.navbar-container-new {
+	padding: 0;
+	background: #fff;
+}
+
+#fixed-navbar .navbar-container-new {
+	padding: 15px 0;
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-content-new {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 50px;
+}
+
+.navbar-brand-new {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: opacity 0.3s;
+	flex-shrink: 0;
+	height: 60px;
+	min-height: 60px;
+	max-height: 60px;
+}
+
+.navbar-brand-new:hover {
+	opacity: 0.8;
+}
+
+.navbar-brand-new img {
+	max-width: 180px;
+	max-height: 60px;
+	height: auto;
+	width: auto;
+	object-fit: contain;
+	display: block;
+}
+
+.navbar-toggler-new {
+	display: none;
+	flex-direction: column;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+
+.navbar-toggler-new:hover {
+	background: #f0f7ff;
+}
+
+.navbar-toggler-new span {
+	width: 28px;
+	height: 3px;
+	background: #2F80ED;
+	margin: 4px 0;
+	transition: all 0.3s;
+	border-radius: 2px;
+}
+
+.navbar-toggler-new.active span:nth-child(1) {
+	transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-toggler-new.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.navbar-toggler-new.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.navbar-menu-new {
+	display: flex !important;
+	align-items: center;
+	gap: 0;
+	flex: 1;
+	justify-content: flex-end;
+	flex-direction: row !important;
+	flex-wrap: nowrap;
+}
+
+.navbar-menu-new .navbar-nav {
+	display: flex !important;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 0;
+	flex-direction: row !important;
+	flex-wrap: nowrap;
+}
+
+.navbar-menu-new .navbar-nav .nav-item {
+	margin: 0;
+	margin-right: 40px;
+	position: relative;
+	display: inline-block !important;
+	float: none !important;
+	vertical-align: middle;
+}
+
+.navbar-menu-new .navbar-nav .nav-item:last-child {
+	margin-right: 0;
+}
+
+.navbar-menu-new .navbar-nav .nav-item a {
+	color: #585978;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 10px 0px;
+	transition: all 0.3s ease-out 0s;
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	line-height: normal;
+	vertical-align: middle;
+	z-index: 1;
+}
+
+.navbar-menu-new .navbar-nav .nav-item:not(.dropdown) > a::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background: #2F80ED;
+	transition: all 0.3s ease-out 0s;
+	left: 0;
+	top: 0px;
+}
+
+.navbar-menu-new .navbar-nav .nav-item a:hover,
+.navbar-menu-new .navbar-nav .nav-item a.active {
+	color: #2F80ED;
+}
+
+.navbar-menu-new .navbar-nav .nav-item:not(.dropdown) > a:hover::after,
+.navbar-menu-new .navbar-nav .nav-item:not(.dropdown) > a.active::after {
+	width: 100%;
+}
+
+/* Pastikan dropdown parent item tidak terlihat seperti button - OVERRIDE MAKSIMAL */
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #585978 !important;
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	min-width: auto !important;
+	min-height: auto !important;
+	max-width: none !important;
+	max-height: none !important;
+	line-height: normal !important;
+	text-align: left !important;
+	transform: none !important;
+	margin: 0 !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+}
+
+.navbar-menu-new .navbar-nav .nav-item.dropdown:hover > a,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a:hover,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle:hover,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll:hover,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown:hover > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a:hover,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle:hover,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll:hover,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown:hover > a,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a:hover,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle:hover,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll:hover {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+	transform: none !important;
+	margin: 0 !important;
+}
+
+/* Pastikan tidak ada pseudo-element yang membuat background */
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a::before,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle::before,
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll::before,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a::before,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle::before,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll::before,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a::before,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle::before,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll::before {
+	display: none !important;
+	content: none !important;
+	background: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+/* OVERRIDE FINAL - Pastikan dropdown parent TIDAK PERNAH terlihat seperti button */
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.button,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a[class*="button"] {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 0 !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #585978 !important;
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	min-width: auto !important;
+	min-height: auto !important;
+	max-width: none !important;
+	max-height: none !important;
+	line-height: normal !important;
+	text-align: left !important;
+	transform: none !important;
+	margin: 0 !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	overflow: visible !important;
+	position: relative !important;
+	z-index: 1 !important;
+}
+
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown:hover > a,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a:hover,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle:hover,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll:hover,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.button:hover,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a[class*="button"]:hover,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown.show > a,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown.active > a {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+	transform: none !important;
+	margin: 0 !important;
+}
+
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a::before,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle::before,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll::before,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a.button::before,
+html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new .navbar-nav .nav-item.dropdown > a[class*="button"]::before {
+	display: none !important;
+	content: none !important;
+	background: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+.btn-admin-new {
+	background: #2F80ED;
+	color: #fff !important;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	transition: all 0.3s ease-out 0s;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 0;
+	white-space: nowrap;
+}
+
+.btn-admin-new:hover {
+	background: #1E5FCC;
+	color: #fff !important;
+}
+
+/* Dropdown - Desain Modern & Menarik */
+.navbar-menu-new .nav-item {
+	position: relative;
+}
+
+/* Pastikan dropdown tetap muncul saat mouse bergerak ke dropdown - HANYA UNTUK DESKTOP */
+@media (min-width: 992px) {
+	.navbar-menu-new .nav-item.dropdown:hover .dropdown-menu,
+	.navbar-menu-new .dropdown-menu:hover {
+		display: block !important;
+		opacity: 1 !important;
+		transform: translateY(0) scale(1) !important;
+		pointer-events: auto !important;
+	}
+	
+	.navbar-menu-new .nav-item:hover .dropdown-menu,
+	.navbar-menu-new .nav-item.dropdown:hover .dropdown-menu {
+		display: block;
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		pointer-events: auto;
+	}
+}
+
+.navbar-menu-new .dropdown-menu {
+	position: absolute;
+	top: calc(100% + 0px);
+	left: 0;
+	background: #fff;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 128, 237, 0.08);
+	border-radius: 12px;
+	padding: 6px 0;
+	min-width: 240px;
+	display: none;
+	z-index: 1000;
+	margin-top: 0;
+	border: 1px solid rgba(47, 128, 237, 0.12);
+	opacity: 0;
+	transform: translateY(-8px) scale(0.98);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	overflow: visible;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	pointer-events: none;
+}
+
+/* Area transisi untuk mencegah dropdown hilang saat mouse bergerak */
+.navbar-menu-new .dropdown-menu::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	right: 0;
+	height: 10px;
+	background: transparent;
+	z-index: 999;
+}
+
+.navbar-menu-new .nav-item:hover .dropdown-menu,
+.navbar-menu-new .dropdown-menu:hover,
+.navbar-menu-new .nav-item.dropdown:hover .dropdown-menu {
+	display: block;
+	opacity: 1;
+	transform: translateY(0) scale(1);
+	pointer-events: auto;
+}
+
+/* Pastikan parent item tidak berubah saat dropdown menu muncul atau hover */
+.navbar-menu-new .nav-item.dropdown:hover > a,
+.navbar-menu-new .nav-item.dropdown:focus > a,
+.navbar-menu-new .nav-item.dropdown:focus-within > a,
+.navbar-menu-new .nav-item.dropdown.show > a,
+.navbar-menu-new .nav-item.dropdown.active > a {
+	background: transparent !important;
+	background-color: transparent !important;
+	border: none !important;
+	padding: 10px 0px !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+}
+
+/* Animasi untuk dropdown items */
+.navbar-menu-new .dropdown-item {
+	display: flex;
+	align-items: center;
+	padding: 14px 20px;
+	color: #2c3e50;
+	text-decoration: none;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	font-size: 15px;
+	font-weight: 500;
+	position: relative;
+	border-left: 3px solid transparent;
+	margin: 2px 6px;
+	border-radius: 8px;
+}
+
+.navbar-menu-new .dropdown-item::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3px;
+	height: 100%;
+	background: linear-gradient(180deg, #2F80ED 0%, #1E5FCC 100%);
+	transform: scaleY(0);
+	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	transform-origin: center;
+	border-radius: 0 3px 3px 0;
+}
+
+.navbar-menu-new .dropdown-item::after {
+	content: '→';
+	position: absolute;
+	right: 18px;
+	opacity: 0;
+	transform: translateX(-5px);
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	color: #2F80ED;
+	font-size: 16px;
+	font-weight: 600;
+	pointer-events: none;
+}
+
+.navbar-menu-new .dropdown-item:hover {
+	background: linear-gradient(90deg, #f0f7ff 0%, #e6f2ff 50%, #f0f7ff 100%);
+	color: #2F80ED;
+	padding-left: 24px;
+	transform: translateX(3px);
+	box-shadow: 0 2px 8px rgba(47, 128, 237, 0.15);
+}
+
+.navbar-menu-new .dropdown-item:hover::before {
+	transform: scaleY(1);
+}
+
+.navbar-menu-new .dropdown-item:hover::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.navbar-menu-new .dropdown-item strong {
+	font-weight: 700;
+	color: #2F80ED;
+	margin-left: 6px;
+	font-size: 15px;
+}
+
+/* Icon untuk dropdown items (opsional) */
+.navbar-menu-new .dropdown-item:first-child {
+	margin-top: 0;
+}
+
+.navbar-menu-new .dropdown-item:last-child {
+	margin-bottom: 0;
+}
+
+/* Separator antara items - menggunakan pseudo-element yang berbeda */
+.navbar-menu-new .dropdown-item:not(:last-child) {
+	border-bottom: 1px solid rgba(47, 128, 237, 0.08);
+	margin-bottom: 2px;
+	padding-bottom: 13px;
+}
+
+/* Arrow indicator untuk dropdown */
+.navbar-menu-new .nav-item.dropdown > a::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid #585978;
+	margin-left: 6px;
+	vertical-align: middle;
+	transition: all 0.3s ease;
+}
+
+.navbar-menu-new .nav-item.dropdown:hover > a::after {
+	border-top-color: #2F80ED;
+	transform: rotate(180deg);
+}
+
+/* Tablet & Mobile - Desain Responsif Modern */
+@media (max-width: 991px) {
+	/* DISABLE HOVER EFFECTS DI MOBILE */
+	.navbar-menu-new .nav-item.dropdown:hover .dropdown-menu,
+	.navbar-menu-new .dropdown-menu:hover,
+	.navbar-menu-new .nav-item:hover .dropdown-menu,
+	.navbar-menu-new .nav-item.dropdown:hover > .dropdown-menu {
+		display: none !important;
+		opacity: 0 !important;
+		pointer-events: none !important;
+	}
+	#fixed-navbar .navbar-container-new {
+		padding: 12px 0;
+		min-height: 70px;
+	}
+	
+	.navbar-brand-new {
+		height: 50px;
+		min-height: 50px;
+		max-height: 50px;
+	}
+	
+	.navbar-brand-new img {
+		max-width: 140px;
+		max-height: 50px;
+	}
+	
+	.navbar-toggler-new {
+		display: flex;
+		z-index: 10;
+	}
+	
+	.navbar-menu-new {
+		position: fixed;
+		top: 70px;
+		left: 0;
+		right: 0;
+		background: #fff;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+		flex-direction: column;
+		align-items: stretch;
+		padding: 0;
+		display: none;
+		border-radius: 0;
+		border-top: 2px solid #2F80ED;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		z-index: 999998;
+		width: 100%;
+	}
+	
+	.navbar-menu-new.active {
+		display: flex;
+		max-height: calc(100vh - 70px);
+		padding: 20px;
+		overflow-y: auto;
+	}
+	
+	.navbar-menu-new .navbar-nav {
+		flex-direction: column !important;
+		width: 100%;
+		gap: 5px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.navbar-menu-new .navbar-nav .nav-item {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 8px;
+		display: block !important;
+	}
+	
+	.navbar-menu-new .navbar-nav .nav-item a {
+		display: block;
+		width: 100%;
+		padding: 12px 15px;
+		border-radius: 8px;
+		text-align: left;
+		font-size: 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.navbar-menu-new .navbar-nav .nav-item a:hover {
+		background: #f0f7ff;
+	}
+	
+	.navbar-menu-new .navbar-nav .nav-item a::after {
+		display: none;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown > a {
+		position: relative;
+		padding-right: 40px !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown > a::after {
+		content: '▼';
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 10px;
+		transition: transform 0.3s;
+		border: none !important;
+		width: auto !important;
+		height: auto !important;
+		float: none !important;
+		margin: 0 !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown.active > a::after {
+		transform: translateY(-50%) rotate(180deg);
+	}
+	
+	/* Override semua rule dropdown untuk mobile */
+	.navbar-menu-new .dropdown-menu {
+		position: static !important;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+		border: 1px solid rgba(47, 128, 237, 0.1) !important;
+		background: #f8f9fa !important;
+		margin-top: 8px !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		border-radius: 10px !important;
+		transform: none !important;
+		opacity: 1 !important;
+		padding: 8px 0 !important;
+		display: none !important;
+		width: 100% !important;
+		min-width: auto !important;
+		max-width: 100% !important;
+		overflow: visible !important;
+		pointer-events: auto !important;
+		top: auto !important;
+		left: auto !important;
+		right: auto !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown.active .dropdown-menu,
+	.navbar-menu-new .nav-item.dropdown.active > .dropdown-menu,
+	.navbar-menu-new .nav-item.dropdown.show .dropdown-menu,
+	.navbar-menu-new .nav-item.dropdown.show > .dropdown-menu {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+	
+	/* Disable hover effects di mobile */
+	.navbar-menu-new .nav-item.dropdown:hover .dropdown-menu {
+		display: none !important;
+	}
+	
+	.navbar-menu-new .dropdown-menu:hover {
+		display: none !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown > a.dropdown-toggle {
+		position: relative;
+		padding-right: 30px !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown > a.dropdown-toggle::after {
+		content: '▼';
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 10px;
+		transition: transform 0.3s;
+		border: none !important;
+		width: auto !important;
+		height: auto !important;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown.active > a.dropdown-toggle::after {
+		transform: translateY(-50%) rotate(180deg);
+	}
+	
+	.navbar-menu-new .dropdown-item {
+		padding: 12px 20px;
+		border-left: none;
+		font-size: 14px;
+		display: block;
+		width: 100%;
+		margin: 0;
+		border-radius: 6px;
+		transition: all 0.2s;
+	}
+	
+	.navbar-menu-new .dropdown-item:hover {
+		background: linear-gradient(90deg, #e6f2ff 0%, #f0f7ff 100%);
+		transform: translateX(3px);
+		padding-left: 24px;
+	}
+	
+	.navbar-menu-new .dropdown-item::before,
+	.navbar-menu-new .dropdown-item::after {
+		display: none;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown {
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	
+	.navbar-menu-new .nav-item.dropdown > a {
+		width: 100%;
+		display: block;
+		text-align: left;
+	}
+	
+	.btn-admin-new {
+		width: 100%;
+		text-align: center;
+		margin-top: 15px;
+		padding: 14px 24px;
+		display: block;
+	}
+}
+
+/* Mobile Small */
+@media (max-width: 575px) {
+	#fixed-navbar .navbar-container-new {
+		padding: 10px 0;
+		min-height: 65px;
+	}
+	
+	.navbar-brand-new {
+		height: 45px;
+		min-height: 45px;
+		max-height: 45px;
+	}
+	
+	.navbar-brand-new img {
+		max-width: 120px;
+		max-height: 45px;
+	}
+	
+	.navbar-toggler-new {
+		padding: 6px;
+	}
+	
+	.navbar-toggler-new span {
+		width: 24px;
+		height: 2.5px;
+		margin: 3px 0;
+	}
+	
+	.navbar-menu-new {
+		top: 65px;
+	}
+	
+	.navbar-menu-new.active {
+		max-height: calc(100vh - 65px);
+		padding: 15px;
+	}
+	
+	.navbar-menu-new .navbar-nav .nav-item a {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+	
+	.btn-admin-new {
+		padding: 12px 20px;
+		font-size: 14px;
+	}
+}
+
+/* Pastikan navbar selalu di atas semua */
+body {
+	padding-top: 80px;
+}
+
+@media (max-width: 991px) {
+	body {
+		padding-top: 70px;
+	}
+}
+
+@media (max-width: 575px) {
+	body {
+		padding-top: 65px;
+	}
+}
+
+/* Fix alignment untuk dropdown */
+.navbar-menu-new .navbar-nav .nav-item.dropdown > a {
+	padding-right: 25px;
+}
+
+/* Pastikan dropdown parent tidak terlihat seperti button saat dropdown dibuka */
+.navbar-menu-new .navbar-nav .nav-item.dropdown.show > a,
+.navbar-menu-new .navbar-nav .nav-item.dropdown.active > a,
+.navbar-menu-new .navbar-nav .nav-item.dropdown[aria-expanded="true"] > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown.show > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown.active > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown[aria-expanded="true"] > a,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown.show > a,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown.active > a,
+html body #fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown[aria-expanded="true"] > a {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	transform: none !important;
+	margin: 0 !important;
+}
+
+/* Override semua kemungkinan yang menyembunyikan navbar */
+#fixed-navbar[style*="display: none"],
+#fixed-navbar[style*="visibility: hidden"],
+#fixed-navbar[style*="opacity: 0"] {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Pastikan menu items selalu horizontal (dari kiri ke kanan) */
+#fixed-navbar .navbar-menu-new,
+#fixed-navbar .navbar-menu-new .navbar-nav,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+}
+
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item {
+	display: inline-block !important;
+	width: auto !important;
+}
+
+
+/* Active state untuk menu items */
+.navbar-menu-new .navbar-nav .nav-item a.active {
+	font-weight: 600;
+	color: #2F80ED;
+}
+
+/* OVERRIDE ULTIMATE - Pastikan dropdown parent TIDAK PERNAH terlihat seperti button dengan specificity maksimal */
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a.dropdown-toggle,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a.page-scroll,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a.dropdown-toggle,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a.page-scroll {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #585978 !important;
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	min-width: auto !important;
+	min-height: auto !important;
+	max-width: none !important;
+	max-height: none !important;
+	line-height: normal !important;
+	text-align: left !important;
+	transform: none !important;
+	margin: 0 !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	overflow: visible !important;
+	position: relative !important;
+	z-index: 1 !important;
+}
+
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown:hover > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a.dropdown-toggle:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown > a.page-scroll:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown:hover > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a.dropdown-toggle:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown > a.page-scroll:hover,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown.show > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul.navbar-nav li.nav-item.dropdown.active > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown.show > a,
+html body nav#fixed-navbar.fixed-navbar-new .navbar-container-new .container .navbar-content-new .navbar-menu-new ul#nav2.navbar-nav li.nav-item.dropdown.active > a {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-right: 25px !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+	transform: none !important;
+	margin: 0 !important;
+}
+
+/* Override semua kemungkinan button style pada dropdown parent */
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	padding: 10px 0px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: #585978 !important;
+	display: inline-block !important;
+	width: auto !important;
+	height: auto !important;
+	min-width: auto !important;
+	min-height: auto !important;
+	max-width: none !important;
+	max-height: none !important;
+	line-height: normal !important;
+	text-align: left !important;
+	transform: none !important;
+	margin: 0 !important;
+}
+
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown:hover > a,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a:hover,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll:hover,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle:hover {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: #2F80ED !important;
+	transform: none !important;
+	padding: 10px 0px !important;
+}
+
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a::before,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.page-scroll::before,
+#fixed-navbar .navbar-menu-new .navbar-nav .nav-item.dropdown > a.dropdown-toggle::before {
+	display: none !important;
+	content: none !important;
+	background: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
