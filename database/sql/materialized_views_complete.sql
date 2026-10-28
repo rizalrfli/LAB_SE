@@ -7,15 +7,15 @@
 
 -- Pastikan kolom email ada di tabel pendaftaran
 -- Jika error "column already exists", abaikan - kolom sudah ada
-ALTER TABLE pendaftaran ADD COLUMN email VARCHAR(255);
+ALTER TABLE pendaftaran ADD COLUMN IF NOT EXISTS email VARCHAR(255);
 
 -- Pastikan kolom instagram ada di tabel anggota  
 -- Jika error "column already exists", abaikan - kolom sudah ada
-ALTER TABLE anggota ADD COLUMN instagram VARCHAR(255);
+ALTER TABLE anggota ADD COLUMN IF NOT EXISTS instagram VARCHAR(255);
 
 -- Pastikan kolom linkedin ada di tabel anggota
 -- Jika error "column already exists", abaikan - kolom sudah ada
-ALTER TABLE anggota ADD COLUMN linkedin VARCHAR(255);
+ALTER TABLE anggota ADD COLUMN IF NOT EXISTS linkedin VARCHAR(255);
 
 -- ============================================
 -- 1. STATISTIK DASHBOARD LENGKAP
