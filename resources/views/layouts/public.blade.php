@@ -119,7 +119,6 @@
                   </div>
                 </li>
               </ul>
-              <a href="{{ route('admin.login') }}" class="btn-admin-new">Admin</a>
             </div>
           </div>
         </div>

@@ -336,27 +336,6 @@ html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navba
 	height: 0 !important;
 }
 
-.btn-admin-new {
-	background: #2F80ED;
-	color: #fff !important;
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 16px;
-	transition: all 0.3s ease-out 0s;
-	border: none;
-	cursor: pointer;
-	display: inline-block;
-	margin-left: 0;
-	white-space: nowrap;
-}
-
-.btn-admin-new:hover {
-	background: #1E5FCC;
-	color: #fff !important;
-}
-
 /* Dropdown - Desain Modern & Menarik */
 .navbar-menu-new .nav-item {
 	position: relative;
@@ -756,14 +735,6 @@ html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navba
 		display: block;
 		text-align: left;
 	}
-	
-	.btn-admin-new {
-		width: 100%;
-		text-align: center;
-		margin-top: 15px;
-		padding: 14px 24px;
-		display: block;
-	}
 }
 
 /* Mobile Small */
@@ -805,11 +776,6 @@ html body #fixed-navbar.fixed-navbar-new .navbar-container-new .container .navba
 	
 	.navbar-menu-new .navbar-nav .nav-item a {
 		padding: 10px 12px;
-		font-size: 14px;
-	}
-	
-	.btn-admin-new {
-		padding: 12px 20px;
 		font-size: 14px;
 	}
 }
